@@ -34,7 +34,7 @@ exports.scrapeGame = async (req, res) => {
 						lowestPrice: item.lowestPrice,
 						imageUrl: item.boxart,
 						releaseDate: item.releaseDateDisplay,
-						currency: 'usd'
+						currency: 'USD'
 					}
 				},
 				{ upsert: true }
@@ -55,7 +55,7 @@ exports.scrapeGame = async (req, res) => {
 						lowestPrice: item.price_lowest_f,
 						imageUrl: item.image_url,
 						releaseDate: item.dates_released_dts,
-						currency: 'euro'
+						currency: 'EUR'
 					}
 				},
 				{ upsert: true }
@@ -75,7 +75,7 @@ exports.scrapeGame = async (req, res) => {
 						currentPrice: parseInt(item.Price.replace('円(税込)', '')),
 						lowestPrice: null,
 						releaseDate: item.Price,
-						currency: 'yen'
+						currency: 'JPY'
 					}
 				},
 				{ upsert: true }
